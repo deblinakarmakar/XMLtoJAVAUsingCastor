@@ -1,0 +1,47 @@
+<binding xmlns="http://www.castor.org/SourceGenerator/Binding"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.castor.org/SourceGenerator/Binding"
+         defaultBinding="element">
+
+ <!--  <elementBinding name="/Data/PurchaseOrder/LineItem">
+      <java-class name="PurchaseOrderLineItem"/>
+   </elementBinding>
+
+   <elementBinding name="/Data/OrderReceipt/LineItem">
+      <java-class name="OrderReceiptLineItem"/>
+   </elementBinding> -->
+
+  <elementBinding name="complexType:PackType/Ingredients">
+            <java-class name="PackTypeIngredients"/>
+         </elementBinding>
+      
+         <elementBinding name="complexType:MultPartItem/Ingredients">
+            <java-class name="MultPartItemIngredients"/>
+   </elementBinding>
+
+<elementBinding name="complexType:PackType/Nutrition">
+            <java-class name="PackTypeNutrition"/>
+         </elementBinding>
+      
+         <elementBinding name="complexType:MultPartItem/Nutrition">
+            <java-class name="MultPartItemNutrition"/>
+   </elementBinding>
+
+<elementBinding name="complexType:ItemsType/Item">
+            <java-class name="ItemsTypeItem"/>
+         </elementBinding>
+      
+         <elementBinding name="complexType:MultPackType/Item">
+            <java-class name="MultPackTypeItem"/>
+   </elementBinding>
+
+<elementBinding name="complexType:ItemType/Name">
+            <java-class name="ItemTypeName"/>
+         </elementBinding>
+      
+         <elementBinding name="complexType:ManufacturerType/Name">
+            <java-class name="ManufacturerTypeName"/>
+   </elementBinding>
+
+
+</binding>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+
+<project name="brandbank" default="castor:gen:src" basedir=".">
+	<tstamp />
+	
+	<property name="brandbankHome" location="." />
+	<target name="init">
+		<path id="castor.class.path">
+				<pathelement location="${brandbankHome}/lib/castor-1.0.jar"/>
+				<pathelement location="${brandbankHome}/lib//castor-1.0-xml.jar"/>
+				<pathelement location="${brandbankHome}/lib//castor-1.0-commons.jar"/>
+				<pathelement location="${brandbankHome}/lib//castor-1.0-codegen.jar"/>
+				<pathelement location="${brandbankHome}/lib//castor-1.0-srcgen-ant-task.jar"/>
+				<pathelement location="${brandbankHome}/lib//commons-logging-1.1.1.jar"/>
+				<pathelement location="${brandbankHome}/lib//xerces-J_1.4.0.jar"/>
+	    </path>	
+	</target>
+	
+	
+	<target name="castor:gen:src" depends="init"
+	         description="Generate Java source files from XSD.">
+	    
+	
+	    <taskdef name="castor-srcgen"
+	             classname="org.exolab.castor.tools.ant.taskdefs.CastorSourceGenTask"
+	             classpathref="castor.class.path" />
+	    
+	   
+	    <castor-srcgen file="DataImport.xsd"
+	                   todir="generated-source"
+	                   package="com.pg.brandbank"	
+	                   bindingfile="${brandbankHome}/binding.xml"
+	                   types="j2"
+	                   warnings="true" />
+	</target>
+	
+</project>
