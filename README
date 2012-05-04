@@ -1,0 +1,5 @@
+Converting xsd to java classes using Castor
+
+Castor XML is an XML databinding framework. Unlike the two main XML APIs, DOM (Document Object Model) and SAX (Simple API for XML) which deal with the structure of an XML document, Castor enables one to deal with the data defined in an XML document through an object model which represents that data.
+
+Castor XML can marshal almost any "bean-like" Java Object to and from XML. In most cases the marshalling framework uses a set of ClassDescriptors and FieldDescriptors to describe how an Object should be marshalled and unmarshalled from XML.
